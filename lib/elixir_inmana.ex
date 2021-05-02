@@ -1,9 +1,5 @@
 defmodule ElixirInmana do
-  @moduledoc """
-  ElixirInmana keeps the contexts that define your domain
-  and business logic.
+  alias ElixirInmana.Restaurants.Create
 
-  Contexts are also responsible for managing your data, regardless
-  if it comes from the database, an external API or others.
-  """
+  defdelegate create_restaurant(args), to: Create, as: :call
 end
