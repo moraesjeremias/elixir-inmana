@@ -8,8 +8,8 @@ defmodule ElixirInmana.Restaurants.Create do
     |> handle_insert()
   end
 
-  defp handle_insert({:ok, %Restaurant{}} = result), do: result
+  def handle_insert({:ok, %Restaurant{}} = result), do: result
 
-  defp handle_insert({:error, %Restaurant{}} = result),
-    do: {:error, %{message: "We got an error: #{result}", status: :bad_request}}
+  def handle_insert({:error, result}),
+    do: {:error, %{result: result, status: :bad_request}}
 end
