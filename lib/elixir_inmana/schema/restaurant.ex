@@ -4,6 +4,8 @@ defmodule ElixirInmana.Restaurant do
 
   @primary_key {:id, :binary_id, autogenerate: true}
 
+  @derive {Jason.Encoder, only: [:id, :name, :email]}
+
   schema "restaurants" do
     field :name, :string
     field :email, :string
