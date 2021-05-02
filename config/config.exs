@@ -10,6 +10,10 @@ use Mix.Config
 config :elixir_inmana,
   ecto_repos: [ElixirInmana.Repo]
 
+config :elixir_inmana, ElixirInmana.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
+
 # Configures the endpoint
 config :elixir_inmana, ElixirInmanaWeb.Endpoint,
   url: [host: "localhost"],
