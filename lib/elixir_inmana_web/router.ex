@@ -7,6 +7,8 @@ defmodule ElixirInmanaWeb.Router do
 
   scope "/api", ElixirInmanaWeb do
     pipe_through :api
+
+    post "/restaurants", RestaurantsController, :create_restaurant
   end
 
   # Enables LiveDashboard only for development
