@@ -4,7 +4,7 @@ defmodule ElixirInmana.Restaurant do
 
   @primary_key {:id, :binary_id, autogenerate: true}
 
-  schema "restaurant" do
+  schema "restaurants" do
     field :name, :string
     field :email, :string
     timestamps()
